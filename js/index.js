@@ -65,7 +65,6 @@ function renderGreenPeppers() {
 function renderWhiteSauce() {
   // Iteration 2: add/remove the class "sauce-white" of `<section class="sauce">`
   let element = document.querySelector(".sauce");
-  console.log(element)
     if (state.whiteSauce) {
       element.classList.add('sauce-white')
     } else {
@@ -86,8 +85,23 @@ function renderGlutenFreeCrust() {
 
 function renderButtons() {
   // Iteration 3: add/remove the class "active" of each `<button class="btn">`
+/*   document.querySelectorAll('.btn').forEach((oneButton) => {
+    if (state.oneButton) {
+      oneButton.classList.add('active')
+    } else {
+      oneButton.classList.remove('active')
+    }
+  }); */
+  document.querySelectorAll('.btn').forEach((oneButton) => {
+    for (i = 0; i = oneButton.length); i += 1) {
+      if (state.oneButton[i]) {
+        oneButton.classList.add('active')
+      } else {
+        oneButton.classList.remove('active')
+      }
+    })}
+    
 
-}
 
 function renderPrice() {
   // Iteration 4: change the HTML of `<aside class="panel price">`
